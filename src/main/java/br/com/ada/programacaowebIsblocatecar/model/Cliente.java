@@ -17,6 +17,7 @@ public class Cliente {
     private String nome;
     private String email;
     private String tipoDocumento;
+    @Column(unique = true)
     private String numeroDocumento;
     private String telefone;
     private String endereco;
