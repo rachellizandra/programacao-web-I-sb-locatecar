@@ -33,10 +33,15 @@ public class ClienteControllerMVC {
     }
     @PostMapping("/cliente/add")
     public String cadastrarCliente(@Valid @ModelAttribute("cliente") Cliente cliente) {
-        if(cliente.getTipoDocumento().equals("cpf") && cliente.getNumeroDocumento().length() != 11) {
-            //throw new MethodArgumentNotValidException("Número de caracteres inválidos");
+        if(cliente.getTipoDocumento().equals("cpf") && cliente.getNumeroDocumento().length() == 11) {
+            this.clienteService.cadastrarCliente(cliente);
+        } else {
         }
-        this.clienteService.cadastrarCliente(cliente);
+        if(cliente.getTipoDocumento().equals("cnpj") && cliente.getNumeroDocumento().length() == 14){
+            this.clienteService.cadastrarCliente(cliente);
+        } else {
+            
+        }
         return "redirect:/clientes";
     }
 }
