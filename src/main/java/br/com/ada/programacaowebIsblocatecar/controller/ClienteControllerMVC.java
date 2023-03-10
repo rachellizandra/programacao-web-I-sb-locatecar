@@ -68,13 +68,13 @@ public class ClienteControllerMVC {
         return "cliente-add";
     }
 
-    @GetMapping("/cliente/{numeroDocumento}/edit")
+/*    @GetMapping("/cliente/{numeroDocumento}/edit")
     public String mostrarClienteDocumento(Model model, @PathVariable("numeroDocumento") String numeroDocumento) {
         Optional<Cliente> optionalCliente = this.clienteService.buscarNumeroDocumento(numeroDocumento);
         optionalCliente.ifPresent(cliente -> model.addAttribute("cliente", cliente));
         model.addAttribute("add", Boolean.FALSE);
         return "cliente-add";
-    }
+    }*/
 
     @PutMapping("/cliente/{clienteId}/edit")
     public String editarCliente(@ModelAttribute("cliente") Cliente cliente,
