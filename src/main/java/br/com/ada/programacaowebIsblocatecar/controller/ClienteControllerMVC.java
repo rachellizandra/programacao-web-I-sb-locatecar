@@ -5,15 +5,12 @@ import br.com.ada.programacaowebIsblocatecar.service.ClienteService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -24,7 +21,7 @@ public class ClienteControllerMVC {
     private ClienteService clienteService;
 
     @GetMapping("/clientes")
-    public ModelAndView veiculos(
+    public ModelAndView clientes(
             @RequestParam(defaultValue = "1", value = "page") Integer numeroPagina,
             @RequestParam(defaultValue = "3", value = "size") Integer tamanhoPagina) {
         //Model, ModelMap e ModelAndView
