@@ -35,7 +35,7 @@
                 <td th:utext="${cliente.telefone}">...</td>
                 <td th:utext="${cliente.endereco}">...</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" th:href="@{/cliente/{clienteId}/edit(clienteId=${cliente.id})}">Edit</a>
+                    <a class="btn btn-primary btn-sm" th:href="@{/cliente/{clienteId}/edit(clienteId=${cliente.id})}">Editar</a>
                     <a class="btn btn-danger btn-sm" th:href="@{/cliente/{clienteId}/delete(clienteId=${cliente.id})}">Delete</a>
                 </td>
             </tr>
