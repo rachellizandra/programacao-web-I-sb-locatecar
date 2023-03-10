@@ -25,7 +25,7 @@
             <div class="mb-3 row">
                 <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
                 <div class="col-sm-3">
-                    <input type="text" th:readonly="${add} ? 'false' : 'true'" th:field="*{email}" class="form-control" id="inputEmail">
+                    <input type="text" th:field="*{email}" class="form-control" id="inputEmail">
                     <ul>
                         <li th:each="erro : ${#fields.errors('email')}" th:text="${erro}" />
                     </ul>
@@ -34,18 +34,18 @@
             <div class="d-flex">
                 <label class="col-sm-2 col-form-label">Tipo do documento</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="true" id="flexRadioDefault1" th:field="*{tipoDocumento}">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="CPF" id="flexRadioDefault1" th:field="*{tipoDocumento}">
                     <label class="form-check-label" for="flexRadioDefault1">CPF</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="false" id="flexRadioDefault2" th:field="*{tipoDocumento}">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="CNPJ" id="flexRadioDefault2" th:field="*{tipoDocumento}">
                     <label class="form-check-label" for="flexRadioDefault2">CNPJ</label>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputNumeroDocumento" class="col-sm-2 col-form-label">Número do documento</label>
                 <div class="col-sm-3">
-                    <input type="text" th:readonly="${add} ? 'false' : 'true'" th:field="*{numeroDocumento}" class="form-control" id="inputNumeroDocumento">
+                    <input type="text" th:field="*{numeroDocumento}" class="form-control" id="inputNumeroDocumento">
                     <ul>
                         <li th:each="erro : ${#fields.errors('numeroDocumento')}" th:text="${erro}" />
                     </ul>
